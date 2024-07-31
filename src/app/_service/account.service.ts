@@ -18,6 +18,19 @@ export class AccountService {
           localStorage.setItem('user',JSON.stringify(user));
           this.currentUser.set(user);
         }
+        return user;//讓注入該服務的組件能拿到傳回值來操作
+      })
+    );
+  }
+
+  register(model: any) {
+    return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
+      map(user =>{
+        if(user){
+          localStorage.setItem('user',JSON.stringify(user));
+          this.currentUser.set(user);
+        }
+        return user; //讓注入該服務的組件能拿到傳回值來操作
       })
     );
   }

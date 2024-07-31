@@ -11,6 +11,18 @@
     />
     <label>Username</label>
   </div>
+
+  <div class="mb-3">
+    <label>你最喜歡的用戶是誰？</label>
+    <select class="form-select">
+      @for (user of userFromHomeComponent(); track $index) {
+        <option [value]="user.userName">
+          {{user.userName}}
+        </option>
+      }
+    </select>
+  </div>
+
   <div class="mb-3 form-floating">
     <input
       type="password"

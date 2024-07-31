@@ -15,7 +15,10 @@
       <div class="row justify-content-center">
         <div class="col-4">
           <p>Register form goes here.報名表在此處</p>
-          <app-register></app-register>
+          <app-register 
+          [userFromHomeComponent]="users"
+          (cancelRegister)="cancelRegisterMode($event)"
+          ></app-register>
         </div>
       </div>
     </div>
