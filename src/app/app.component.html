@@ -1,10 +1,15 @@
-<h1>{{ title }}</h1>
+<app-nav></app-nav>
 
-<!-- track可幫助追蹤列表中每個項目 指定每筆資料唯一標識符id 列表發生變化時只更新變化的項目不重新渲染整個列表 也可使用$index但列表發生變化每個索引都會改變 導致將渲染部必要的資料造成效能降低 -->
-<ul>
-    @for (user of users; track user.id) {
-        <li>
-            {{user.id}} {{user.userName}}
-        </li>
-    }
-</ul>
+<div class="container" style="margin-top: 100px;">
+    <!-- track可幫助追蹤列表中每個項目 指定每筆資料唯一標識符id 列表發生變化時只更新變化的項目不重新渲染整個列表 也可使用$index但列表發生變化每個索引都會改變 導致將渲染部必要的資料造成效能降低 -->
+    <!-- <ul>
+        @for (user of users; track user.id) {
+            <li>
+                {{user.id}} {{user.userName}}
+            </li>
+        }
+    </ul> -->
+
+    <app-home></app-home>
+
+</div>
